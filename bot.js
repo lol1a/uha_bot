@@ -125,34 +125,7 @@ client.on('message', message => {
        }
     });
     
-    client.on('message', message => {
     
-      if(command === prefix + 'mc') {
-                            if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
-    
-    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
-               message.channel.overwritePermissions(message.guild.id, {
-             SEND_MESSAGES: false
-    
-               }).then(() => {
-                   message.reply("تم تقفيل الشات ✅ ")
-               });
-                 }
-                 if(command === prefix + 'unmc') {
-        if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
-    
-    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
-               message.channel.overwritePermissions(message.guild.id, {
-             SEND_MESSAGES: true
-    
-               }).then(() => {
-                   message.reply("تم فتح الشات✅")
-               });
-                 }
-    
-    
-    
-    });
       
       client.on("message", message => {
       
@@ -175,7 +148,7 @@ client.on('message', message => {
            console.log(`ON ${client.guilds.size} Servers '     Script By : Diamond Codes ' `);
          console.log(`----------------`);
        console.log(`Logged in as ${client.user.tag}!`);
-     client.user.setGame(`Loyalty Community | System`)//حقوق دايموند كودز
+     client.user.setGame(`uchiha_hackers | System`)//حقوق دايموند كودز
      client.user.setStatus("online")
      
      });
